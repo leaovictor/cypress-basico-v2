@@ -1,29 +1,57 @@
-# Testes automatizados com Cypress - Básico
+# Documentação dos Testes Cypress
 
-👋 Seja bem-vindo(a)!
+Este documento descreve os testes automatizados realizados na aplicação "Central de Atendimento ao Cliente TAT" usando o framework Cypress.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+## Pré-requisitos
 
-## O que você vai aprender
+Certifique-se de ter o Cypress instalado globalmente ou localmente no seu projeto.
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
+## Executando os Testes
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
+Para executar os testes, basta executar o seguinte comando no terminal:
 
-## Vamos começar?
+`npx cypress open`
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+Isso abrirá a interface do Cypress, onde você poderá selecionar e executar os testes individualmente ou todos de uma vez.
 
-___
+## Descrição dos Testes
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+### 1. Verifica o título da aplicação
+
+Este teste verifica se o título da página corresponde ao esperado.
+
+### 2. Deve selecionar a opção YouTube com sucesso
+
+Testa se é possível selecionar a opção "YouTube" em um campo de seleção.
+
+### 3. Preenche dos campos obrigatórios e envia o formulário
+
+Este teste preenche os campos obrigatórios de um formulário e verifica se a mensagem de sucesso é exibida após o envio.
+
+### 4. Marca ambos os checkboxes
+
+Testa se é possível marcar e desmarcar checkboxes.
+
+### 5. Adicionar um anexo
+
+Verifica se é possível adicionar um anexo a partir de um arquivo selecionado.
+
+### 6. Adicionar um anexo usando drag-drop
+
+Testa a funcionalidade de adicionar um anexo arrastando e soltando um arquivo.
+
+### 7. Seleciona um arquivo usando uma Fixture para qual foi dada um alias
+
+Verifica se é possível selecionar um arquivo usando uma Fixture previamente definida.
+
+### 8. Verifica que a política de privacidade abre em outra aba
+
+Testa se o link para a política de privacidade abre em outra aba.
+
+### 9. Acessa a página "Política de Privacidade" removendo o target e então clicando no link
+
+Testa se é possível acessar a página de política de privacidade removendo o atributo 'target' do link.
+
+## Conclusão
+
+Estes testes fornecem uma cobertura básica das principais funcionalidades da aplicação "Central de Atendimento ao Cliente TAT". Eles são executados automaticamente para garantir que a aplicação esteja funcionando conforme o esperado.
