@@ -24,7 +24,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
         });
     });
 
-    it.skip('Preenche dos campos obrigatórios e envia o formulário', () => {
+    it('Preenche dos campos obrigatórios e envia o formulário', () => {
 
         cy.get('#firstName').should('be.visible').type('Victor')
         cy.get('#lastName').should('be.visible').type('Leão')
