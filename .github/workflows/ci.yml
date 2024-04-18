@@ -5,7 +5,7 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout do código
       uses: actions/checkout@v2
@@ -19,7 +19,12 @@ jobs:
       run: npm install
 
     - name: Iniciar Live Server
-      run: npx live-server --port=5500 --no-browser --quiet
+      run: |
+        npx live-server --port=5500 --no-browser --quiet &   # Inicia o Live Server em segundo plano
+        sleep 5  # Aguarda alguns segundos para garantir que o Live Server tenha sido iniciado corretamente
 
     - name: Executar testes
       run: npm test
+
+    - name: Encerrar Live Server
+      run: kill $(lsof -t -i:5500) || true   # Encerra o Live Server após a conclusão dos testes
